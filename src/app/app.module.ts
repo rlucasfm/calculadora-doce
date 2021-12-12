@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './views/menu/menu.component';
 import { DocesComponent } from './views/doces/doces.component';
 import { LacosComponent } from './views/lacos/lacos.component';
+import { NavbarComponent } from './modules/navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     DocesComponent,
-    LacosComponent
+    LacosComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]
