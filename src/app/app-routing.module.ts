@@ -7,7 +7,7 @@ import { MenuComponent } from './views/menu/menu.component';
 const routes: Routes = [
   { path: 'doces',  component: DocesComponent },
   { path: 'lacos',  component: LacosComponent },
-  { path: 'menu',   component: MenuComponent },
+  { path: '',   component: MenuComponent },
 ];
 
 @NgModule({
