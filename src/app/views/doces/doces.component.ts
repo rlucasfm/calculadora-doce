@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
 import { Orcamento } from 'src/app/models/orcamento';
+import { FinalizarModalComponent } from 'src/app/modules/finalizar-modal/finalizar-modal.component';
 
 @Component({
   selector: 'app-doces',
@@ -9,9 +10,11 @@ import { Orcamento } from 'src/app/models/orcamento';
 })
 export class DocesComponent implements OnInit {
 
+  @ViewChild(FinalizarModalComponent) modal_finalizar: any;
+
   orcamentos: Orcamento[] = [
-    { descricao: "Leite condensado", rendimento: 0.5, valor: 4.9 },
-    { descricao: "Creme de leite", rendimento: 0.5, valor: 4.9 }
+    { descricao: "Leite condensado", rendimento: 1, valor: 4.95 },
+    { descricao: "Creme de leite", rendimento: 1, valor: 4.95 }
   ];
 
   colunas: string[] = ["Descrição", "Rendimento", "Valor"];
@@ -48,6 +51,14 @@ export class DocesComponent implements OnInit {
   }
 
   adicionarCusto() {
-    this.orcamentos.push({descricao: '', rendimento: 1, valor: 0})
+    this.orcamentos.push({descricao: '', rendimento: 1, valor: 0})  
+  }
+
+  removerCusto(indice: number) {
+    this.orcamentos.splice(indice, 1);
+  }
+
+  abrir_modal() {
+    this.modal_finalizar.toggleActive();
   }
 }

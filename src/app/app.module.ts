@@ -8,6 +8,7 @@ import { DocesComponent } from './views/doces/doces.component';
 import { LacosComponent } from './views/lacos/lacos.component';
 import { NavbarComponent } from './modules/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
+import { FinalizarModalComponent } from './modules/finalizar-modal/finalizar-modal.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     DocesComponent,
     LacosComponent,
-    NavbarComponent
+    NavbarComponent,
+    FinalizarModalComponent
   ],
   imports: [
     BrowserModule,

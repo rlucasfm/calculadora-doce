@@ -30,9 +30,7 @@
               "src/styles.css",
               "src/assets/css/bulma.css"
             ],
-            "scripts": [
-              "src/assets/js/jquery.mask.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {

@@ -1,1 +1,43 @@
-<p>lacos works!</p>
+<app-finalizar-modal [orcamento_atual]="soma"></app-finalizar-modal>
+<div class="container">
+    <div class="columns is-centered">
+        <h3 class="title mt-4">Calculadora para orçamento de lacinhos da Lindi_nhalacos</h3>
+    </div>
+    <div class="columns is-centered mt-6">
+        <div class="column is-10">
+            <table class="table is-striped is-fullwidth">
+                <thead>
+                    <tr>
+                        <th *ngFor="let keys of colunas">{{keys}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of orcamentos; let inx=index">
+                        <th><input [(ngModel)]="row.descricao"></th>
+                        <td><input [(ngModel)]="row.rendimento"></td>
+                        <td>R$ <input type="number" [ngModel]="row.valor" (ngModelChange)="row.valor = atualizarValor($event)"></td>
+                        <td><button class="button is-danger is-small" (click)="removerCusto(inx)">Remover</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Custo Unitário</th>
+                        <td></td>
+                        <td>R$ {{ soma }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>        
+    </div>
+    <div class="columns is-centered">
+        <div class="column has-text-centered">
+            <button class="button is-warning" (click)="adicionarCusto();">Adicionar custo</button>
+        </div>        
+        <div class="column has-text-centered">
+            <button class="button is-primary" (click)="abrir_modal()">Finalizar orçamento</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="modal" [ngClass]="get_active_class()">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+        <p class="modal-card-title">Finalizar o orçamento</p>
+        <button class="delete" aria-label="close" (click)="toggleActive()"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="columns is-centered">
+                <div class="column is-4 has-text-centered">
+                    <input type="number" placeholder="margem de lucro (%)" [(ngModel)]="margem_lucro"> %
+                </div>
+                <div class="column is-8 has-text-centered">
+                    <h4 class="title is-4">Valor de venda: R$: {{show_preco()}}</h4>
+                </div>
+            </div>            
+        </section>
+        <footer class="modal-card-foot">
+        <button class="button is-success" (click)="toggleActive()">Concluir</button>        
+        </footer>
+    </div>
+</div>
