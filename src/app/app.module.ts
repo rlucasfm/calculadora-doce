@@ -9,6 +9,7 @@ import { LacosComponent } from './views/lacos/lacos.component';
 import { NavbarComponent } from './modules/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { FinalizarModalComponent } from './modules/finalizar-modal/finalizar-modal.component';
+import { FreelasComponent } from './views/freelas/freelas.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FinalizarModalComponent } from './modules/finalizar-modal/finalizar-mod
     DocesComponent,
     LacosComponent,
     NavbarComponent,
-    FinalizarModalComponent
+    FinalizarModalComponent,
+    FreelasComponent
   ],
   imports: [
     BrowserModule,

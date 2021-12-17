@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="columns is-centered">
+        <h3 class="title is-5 mt-4">Calculadora rápida de orçamento</h3>
+    </div>
+    <div class="columns">
+        <h4 class="subtitle is-5">Calculo de preço por hora baseado no salário</h4>
+    </div>
+    <div class="columns">        
+        <div class="column">
+            <div class="field">
+                <label class="label">Salário mensal:</label>
+                <div class="control">
+                    <input class="input" type="number" step="0.01" [(ngModel)]="salario">
+                </div>
+            </div>            
+        </div>
+        <div class="column">
+            <div class="field">
+                <label class="label">Dias trabalhados por mês</label>
+                <div class="control">
+                    <input class="input" type="number" step="1" [(ngModel)]="diasmes">
+                </div>
+            </div>            
+        </div>
+        <div class="column">
+            <div class="field">
+                <label class="label">Horas trabalhados por dia</label>
+                <div class="control">
+                    <input class="input" type="number" step="1" [(ngModel)]="horasdia">
+                </div>
+            </div>            
+        </div>
+    </div>
+    <div class="columns is-centered">
+        <div class="column is-2">
+            <div class="field">
+                <label class="label">Custo da hora</label>
+                <div class="control">
+                    <input class="input" type="number" step="1" [value]="precohora" readonly>
+                </div>
+            </div> 
+        </div>
+        <div class="column is-2">
+            <div class="field">
+                <label class="label">% plus</label>
+                <div class="control">
+                    <input class="input" type="number" step="1" [(ngModel)]="plus">
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column"></div>
+        <div class="column">
+            <div class="field">
+                <label class="label">Horas estipuladas</label>
+                <div class="control">
+                    <input class="input" type="number" step="1" [(ngModel)]="horasestipuladas">
+                </div>
+            </div> 
+        </div>
+        <div class="column">
+            <div class="field">
+                <label class="label">Custo total estipulado</label>
+                <div class="control">
+                    <input class="input" type="number" step="1" [value]="precoestipulado" readonly>
+                </div>
+            </div> 
+        </div>
+        <div class="column"></div>
+    </div>
+</div>

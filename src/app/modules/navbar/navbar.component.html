@@ -13,13 +13,17 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-        <a class="navbar-item" routerLink="/doces" routerLinkActive="active">
-            Calculadora de Doces
-        </a>
+            <a class="navbar-item" routerLink="/doces" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                Calculadora de Doces
+            </a>
 
-        <a class="navbar-item" routerLink="/lacos" routerLinkActive="active">
-            Calculadora de Laços
-        </a>      
+            <a class="navbar-item" routerLink="/lacos" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                Calculadora de Laços
+            </a>
+
+            <a class="navbar-item" routerLink="/freelas" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                Calculadora de Freelas
+            </a>
         </div>
 
         <div class="navbar-end">
